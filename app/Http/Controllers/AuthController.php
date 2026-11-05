@@ -58,7 +58,13 @@ class AuthController extends Controller
         ], PesanValidasi::pesan(), PesanValidasi::atribut());
 
         // Akun yang mendaftar lewat form selalu berperan Mahasiswa.
-        Mahasiswa::create($data);
+        $mahasiswa = new Mahasiswa();
+        $mahasiswa->setNama($data['name'])
+            ->setNim($data['nim'])
+            ->setEmail($data['email'])
+            ->setNoHp($data['no_hp'] ?? null)
+            ->setPassword($data['password']);
+        $mahasiswa->save();
 
         return redirect()->route('login')->with('sukses', 'Akun berhasil dibuat. Silakan masuk.');
     }

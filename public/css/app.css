@@ -230,7 +230,7 @@ a.paginasi__item:hover { border-color: var(--biru); color: var(--biru); }
 
 /* Footer */
 .footer { border-top: 1px solid var(--garis); background: var(--putih); padding: 22px 0; color: var(--redup); font-size: .9rem; }
-.footer .wadah { display: flex; gap: 12px; flex-wrap: wrap; align-items: baseline; }
+.footer .wadah { display: flex; gap: 12px; flex-wrap: wrap; align-items: baseline; justify-content: center; text-align: center; }
 .footer strong { color: var(--tinta); font-family: var(--font-judul); }
 
 /* 5. HALAMAN -------------------------------------------------------------- */
